@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,10 +28,11 @@ body {
   padding: 1.2rem 4.8rem 1.2rem 1.2rem;
   align-items: center;
 
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 9.6rem;
 }
+
 .header-img {
   height: 7.2rem;
 }
@@ -60,11 +62,12 @@ body {
 .first-section {
   background-color: #e6e6e6;
   /* padding: 4.8rem 0 9.6rem 0; */
-  padding: 12.8rem 0 9.6rem 0;
+  padding: 4.8rem 0 8rem 0;
 }
 
 .first-section-container {
   max-width: auto;
+  margin: 0 auto;
   padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -85,11 +88,13 @@ body {
 .container {
   max-width: auto;
   padding: 4.8rem 3.2rem;
+  padding: 12.8rem 3.2rem 4.8rem 3.2rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 9.6rem;
 
   align-items: start;
+  margin-top: 6.4rem;
 }
 
 .box-1-img {
@@ -129,4 +134,22 @@ body {
   gap: 9.6rem;
   padding: 4.8rem 9.6rem;
   font-size: 3.2rem;
+}
+
+/* ------   STICKY SECTION   ------ */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .first-section {
+  margin-top: 9.6rem;
 }
